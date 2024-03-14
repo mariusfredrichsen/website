@@ -1,3 +1,29 @@
+:root {
+    --head-color: rgb(0, 0, 0);
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.scroll {
+    height: 300vh;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .CV {
-    text-align: center;
+    position: fixed;
+}
+
+.header {
+    color: var(--head-color);
+    font-size: calc(4vh + 4vw);
+    top: 0;
+    left: 5vw;
+}
+
+.content {
+    
 }

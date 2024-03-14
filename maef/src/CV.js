@@ -1,10 +1,45 @@
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import './CV.css'
 
+
+
 function CV() {
+    const [hOpacity, setHeaderOpacity] = useState(1);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+        // Adjust these values to suit your needs
+        const fadeStart = 100; // 100px scroll or less will equiv to 1 opacity
+        const fadeUntil = 600; // 500px scroll or more will equiv to 0 opacity
+  
+        let opacity = 1;
+        if (scrollY <= fadeStart) {
+          opacity = 1;
+        } else if (scrollY <= fadeUntil) {
+          opacity = 1 - (scrollY - fadeStart) / (fadeUntil - fadeStart);
+        } else {
+          opacity = 0;
+        }
+  
+        setHeaderOpacity(opacity);
+      };
+
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
     return (
+        
+      <div className='scroll'>
         <div className="CV">
-            <h1>Marius Fredrichsen</h1>
+          <h1 className='header' style={{opacity: hOpacity}}>Marius Fredrichsen</h1>
+          <p className='content' style={{opacity: 1-hOpacity}}>
+
             Adresse: Oslo (mer detaljer oppgis ved forespørsel)<br/>
             Telefon: 94141698<br/>
             Epost: mariusfredrichsen@gmail.com<br/>
@@ -34,9 +69,9 @@ function CV() {
             <br/>
             Referanse<br/>
             Oppgis ved forespørsel
-
-
+          </p>
         </div>
+      </div>
     )
 }
 
