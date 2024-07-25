@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import './App.css';
 
 
-const Link = ({content, link, target}) => {
+const Link = ({ content, link, target }) => {
     const [newContent, setNewContent] = useState("> " + content + " <")
     return (
-        <div style={{padding: "4px"}}>
-            <a 
-                href={link} 
-                target={target} 
+        <div className="link">
+            <a
+                href={link}
+                target={target}
                 rel="noreferrer"
-                style={{textDecoration: "none", color: "White"}}
-                onMouseEnter = {() => {
+                className="link"
+                onMouseEnter={() => {
                     setNewContent(">" + content + "<")
                 }}
-                onMouseLeave = {() => {
+                onMouseLeave={() => {
                     setNewContent("> " + content + " <")
                 }}
-            
+
             >{newContent}</a>
             <br></br>
         </div>

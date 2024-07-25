@@ -1,10 +1,10 @@
 import Sorter from './Sorter';
 import './App.css';
 
-function Background({children}) {
+function Background({ children }) {
     return (
         <div className='background'>
-            {Sorter({children})}
+            {Sorter({ children })}
         </div>
     )
 }
