@@ -3,10 +3,11 @@ import './App.css';
 
 function ThemeButton() {
 
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState(localStorage.getItem("theme") === null ? 'dark' : localStorage.getItem("theme"));
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem("theme", theme)
     }, [theme]);
 
     const toggleTheme = () => {
