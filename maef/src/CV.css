@@ -68,9 +68,9 @@
     --accent-800: #614405;
     --accent-900: #312202;
     --accent-950: #181101;
-  
-  }
-  :root[data-theme="dark"] {
+}
+
+:root[data-theme="dark"] {
     --text-50: #0d0d0d;
     --text-100: #1a1a1a;
     --text-200: #333333;
@@ -130,14 +130,6 @@
     --accent-800: #fadd9e;
     --accent-900: #fdeece;
     --accent-950: #fef7e7;
-  
-  }
-  
-
-
-body {
-    background-color: var(--background-50);
-    color: var(--text-950);
 }
 
 .text-left {
@@ -174,8 +166,66 @@ body {
 
 .overhead {
     display: grid;
-    grid-template-columns: repeat(3, 33.333333333333333%);
+    grid-template-columns: repeat(2, 50%);
     align-items: top;
+    height: 50px;
+}
+
+.drop-down {
+    background-color: color-mix(in srgb, var(--background-100), var(--background-200));
+    border-radius: 7.5px;
+    text-align: left;
+    margin: 10px;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--primary-500);
+}
+
+a:hover {
+    color: var(--primary-700)
+}
+
+.semester > h5 {
+    margin-top: 0px;
+    margin-bottom: 2.5px;
+}
+
+.study-header {
+    transition-duration: 0.1s;
+    border-radius: 7.5px;
+    padding: 10px;
+}
+
+.study-header:hover {
+    box-shadow: 2px 2px 5px 0 #0000003d;
+    background-color: color-mix(in srgb, var(--background-100), var(--background-200) 60%);
+    cursor: pointer;
+}
+
+.study-header:active {
+    background-color: var(--background-200);
+}
+
+.links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.semester {
+    background-color: color-mix(in srgb, var(--background-100), var(--background-200));
+    border-radius: 7.5px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1.5px;
+    border-color: var(--text-500);
+}
+
+.semester > h5 {
+    font-size: 0.95rem;
 }
 
 ul {

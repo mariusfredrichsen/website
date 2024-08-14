@@ -16,7 +16,7 @@ function ThemeButton() {
 
     return (
         <div>
-            <button className="dl_button" onClick={toggleTheme}>
+            <button className="theme_button" onClick={toggleTheme}>
                 {theme === 'dark' ? 'Light' : 'Dark'} theme
             </button>
         </div >
