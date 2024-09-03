@@ -58,9 +58,9 @@ function CV() {
 						<p className="date-intervall">Aug-2024 – Nå</p>
 
 						<ul>
-							<li>Holdt undervisning i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN2010/" className="cv-link">IN2010: Algoritmer og datastrukturer</a></li>
+							<li>Holdt undervisning i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN2010/" target="_blank" rel="noreferrer" className="cv-link">IN2010: Algoritmer og datastrukturer</a></li>
 							<li>Rettet innleveringer</li>
-							<li>Hjelpet studenter i lab timer</li>
+							<li>Hjulpet studenter i lab timer</li>
 						</ul>
 
 					</p>
@@ -72,7 +72,7 @@ function CV() {
 
 						<ul>
 							<li>Holdt undervisning om programmering for 5. og 6. klassinger<br />Teknologier: Scratch, Sphero Edu, MS Arcade, CoSpaces Edu, Python</li>
-							<li>Hjelpet barn med utfordingene bak programmering</li>
+							<li>Hjulpet barn med utfordingene bak programmering</li>
 						</ul>
 					</p>
 
@@ -83,9 +83,9 @@ function CV() {
 						<p className="date-intervall">Aug-2023 – Des-2023 og Jan-2024 – Jun-2024</p>
 
 						<ul>
-							<li>Holdt undervisning i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN1000/" className="cv-link">IN1000: Introduksjon til objektorientert programmering</a></li>
+							<li>Holdt undervisning i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN1000/" target="_blank" rel="noreferrer" className="cv-link">IN1000: Introduksjon til objektorientert programmering</a></li>
 							<li>Rettet innleveringer</li>
-							<li>Hjelpet studenter i lab timer</li>
+							<li>Hjulpet studenter i lab timer</li>
 						</ul>
 
 					</p>
@@ -159,6 +159,8 @@ function CV() {
 								<h5>5. Semester (pågår)</h5>
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN2040/" target="_blank" rel="noreferrer">IN2040: Funksjonell programmering</a><br />
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN3130/" target="_blank" rel="noreferrer">IN3130: Algoritmer: Design og effektivitet</a><br />
+								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN5290/" target="_blank" rel="noreferrer">IN5290: Ethical Hacking</a><br />
+								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN5320/" target="_blank" rel="noreferrer">IN5320: Development in platform ecosystems</a><br />
 
 							</div>
 						</div>
@@ -221,7 +223,7 @@ function CV() {
 
 					<p className="text-left">
 						Førerkort – Klasse B automat<br />
-						Språk – Norsk meget godt og Engelsk godt
+						Språk – Norsk morsmål og Engelsk godt
 					</p>
 
 				</div>
