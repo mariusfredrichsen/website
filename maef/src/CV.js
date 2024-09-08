@@ -40,8 +40,8 @@ function CV() {
 				<div className="text-left">
 					<p>
 						Adresse: Oslo (mer detaljer oppgis ved forespørsel)<br />
-						Telefon: 94141698<br />
-						Epost: mariusfredrichsen@gmail.com<br />
+						Telefon: <a href="tel:94141698">+47 941 41 698</a><br />
+						Epost: <a href="mailto:mariusfredrichsen@gmail.com">mariusfredrichsen@gmail.com</a><br />
 						Født: 15.08.2002<br />
 					</p>
 				</div>
@@ -60,7 +60,7 @@ function CV() {
 						<ul>
 							<li>Holdt undervisning i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN2010/" target="_blank" rel="noreferrer" className="cv-link">IN2010: Algoritmer og datastrukturer</a></li>
 							<li>Rettet innleveringer</li>
-							<li>Hjulpet studenter i lab timer</li>
+							<li>Hjulpet studenter i labtimer</li>
 						</ul>
 
 					</p>
@@ -72,7 +72,7 @@ function CV() {
 
 						<ul>
 							<li>Holdt undervisning om programmering for 5. og 6. klassinger<br />Teknologier: Scratch, Sphero Edu, MS Arcade, CoSpaces Edu, Python</li>
-							<li>Hjulpet barn med utfordingene bak programmering</li>
+							<li>Hjulpet barn med programmering</li>
 						</ul>
 					</p>
 
@@ -85,7 +85,7 @@ function CV() {
 						<ul>
 							<li>Holdt undervisning i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN1000/" target="_blank" rel="noreferrer" className="cv-link">IN1000: Introduksjon til objektorientert programmering</a></li>
 							<li>Rettet innleveringer</li>
-							<li>Hjulpet studenter i lab timer</li>
+							<li>Hjulpet studenter i labtimer</li>
 						</ul>
 
 					</p>
@@ -116,7 +116,7 @@ function CV() {
 
 							<strong>Universitet i Oslo</strong><br />
 							<p className="date-intervall">Aug-2022 – Nå</p>
-							Bachelor utdanning Informatikk – Fritt sammensatt<br />
+							Bachelor i Informatikk – Fritt sammensatt<br />
 
 						</div>
 
@@ -156,12 +156,11 @@ function CV() {
 							</div>
 
 							<div className="semester">
-								<h5>5. Semester (pågår)</h5>
+								<h5>5. Semester (while True:)</h5>
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN2040/" target="_blank" rel="noreferrer">IN2040: Funksjonell programmering</a><br />
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN3130/" target="_blank" rel="noreferrer">IN3130: Algoritmer: Design og effektivitet</a><br />
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN5290/" target="_blank" rel="noreferrer">IN5290: Ethical Hacking</a><br />
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN5320/" target="_blank" rel="noreferrer">IN5320: Development in platform ecosystems</a><br />
-
 							</div>
 						</div>
 					</div>
@@ -193,16 +192,29 @@ function CV() {
 						<div>
 							<p className="date-intervall">Teknologier: Android Studio, Kotlin, SQL,  Figma</p>
 							Et gruppe-prosjekt i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN2000/" target="_blank" rel="noreferrer">IN2000: Software Engineering med prosjektarbeid </a>
-							som handler om å lage en Android App som bruker vær dataen til Meteorologisk institutt.
+							som handler om å lage en Android App som bruker vær dataen til Meteorologisk institutt. <br />
+							I tillegg vant gruppen en <a href="">pris</a>.
 							Mer info om prosjektet <a href="https://github.com/BaatBuddy/BaatBuddy" target="_blank" rel="noreferrer">her</a>.<br /><br />
 						</div>
 
 						<strong>Discord-bot</strong><br />
 						<div>
 							<p className="date-intervall">Teknologier: Python, MongoDB</p>
-							En <a href="https://discord.com/" target="_blank" rel="noreferrer">discord </a>bot jeg jobber på i fritiden. Den inneholder funksjoner som lar deg se algoritmer sortere
-							lister av tall, se et <a href="https://open.kattis.com/" target="_blank" rel="noreferrer">kattis </a> scoreboard blant venner, et
-							<a href="https://en.wikipedia.org/wiki/Incremental_game" target="_blank" rel="noreferrer"> incremental game </a> som handler om ender og egg (WIP), og andre små discord relaterte funksjoner.
+							En <a href="https://discord.com/" target="_blank" rel="noreferrer">Discord </a>bot jeg jobber på i fritiden. Følgende funksjoner:
+							<ul>
+								<li>
+									visualisering av sorterings algoritmer
+								</li>
+								<li>
+									et <a href="https://open.kattis.com/" target="_blank" rel="noreferrer">kattis </a> scoreboard
+								</li>
+								<li>
+									et <a href="https://en.wikipedia.org/wiki/Incremental_game" target="_blank" rel="noreferrer"> incremental game </a> (WIP)
+								</li>
+								<li>
+									og andre små Discord relaterte funksjoner
+								</li>
+							</ul>
 							Mer info <a href="https://github.com/mariusfredrichsen/discordbot" target="_blank" rel="noreferrer">her</a>.
 						</div>
 						<br />
@@ -223,13 +235,13 @@ function CV() {
 
 					<p className="text-left">
 						Førerkort – Klasse B automat<br />
-						Språk – Norsk morsmål og Engelsk godt
+						Språk – Norsk morsmål og Engelsk flytende
 					</p>
 
 				</div>
 
 				<div className="box-first">
-					<h2>Referanse</h2>
+					<h2>Referanser</h2>
 
 					<hr></hr>
 
