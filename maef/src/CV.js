@@ -59,6 +59,7 @@ function CV() {
 
 						<ul>
 							<li>Holdt undervisning i <a href="https://www.uio.no/studier/emner/matnat/ifi/IN2000/" target="_blank" rel="noreferrer" className="cv-link">IN2000: Software Engineering med prosjektarbeid </a></li>
+							<li>Veiledet 7 forskjellige teams i hvert deres gruppeprosjekt</li>
 							<li>Rettet innleveringer</li>
 							<li>Hjulpet studenter i labtimer</li>
 						</ul>
@@ -177,10 +178,9 @@ function CV() {
 							</div>
 
 							<div className="semester">
-								<h5>6. Semester (while True:)</h5>
+								<h5>6. Semester</h5>
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN3030/">IN3030: Effektiv parallellprogrammering</a><br />
 								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN3050/">IN3050: Introduksjon til kunstig intelligens og maskinlæring</a><br />
-								<a href="https://www.uio.no/studier/emner/matnat/ifi/IN4030/">IN4030: Introduksjon til bioinformatikk</a><br />
 							</div>
 						</div>
 					</div>
