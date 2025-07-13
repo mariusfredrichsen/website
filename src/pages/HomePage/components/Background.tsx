@@ -2,15 +2,13 @@ import { useEffect, useState, useRef } from "react";
 
 
 
-function Background() {
+
+function Background({ sortType }: { sortType: string }) {
     const [numbers, setNumbers] = useState([42]);
     const [isOverflowing, setIsOverflowing] = useState(false);
     const [isSorted, setIsSorted] = useState(false);
     const [i, setI] = useState(0)
     const divRef = useRef<HTMLDivElement | null>(null);
-
-    type SortType = "bubble" | "select" | "insert";
-    const [sortType, setSortType] = useState<SortType>("insert");
 
     useEffect(() => {
         const randomNum = Math.floor(Math.random() * 90 + 10);

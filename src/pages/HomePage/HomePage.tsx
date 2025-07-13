@@ -9,7 +9,11 @@ type HoverLinkProps = {
     target: string;
 }
 
+type SortType = "bubble" | "select" | "insert";
+
 function HomePage() {
+    const [sortType, setSortType] = useState<SortType>("insert");
+
 
     const hoverLinks: HoverLinkProps[] = hoverLinksJson
 
@@ -45,9 +49,27 @@ function HomePage() {
         )
     }
 
+    const SortingButton = () => {
+
+        return (
+            <button
+                className="absolute top-8 right-8 bg-gray-600 text-white px-4 py-2 rounded z-20"
+                onClick={() => {
+                    setSortType(prev => {
+                        if (prev === "bubble") return "select";
+                        if (prev === "select") return "insert";
+                        return "bubble";
+                    });
+                }}
+            >
+                Sort: {sortType.charAt(0).toUpperCase() + sortType.slice(1)}
+            </button>
+        )
+    }
+
     return (
         <div className="flex w-screen h-screen justify-center items-center relative">
-            <div className="p-8 bg-gray-900/95 rounded-2xl text-center w-1/4 z-10">
+            <div className="p-8 bg-gray-900/95 rounded text-center w-1/4 z-10">
                 <header className="flex flex-col gap-4">
                     <h1>Velkommen!</h1>
                     <p>Jeg heter Marius Angelo Eullaran Fredrichsen (derfor maef.no) og er en 22år gammal student som skal starte 1.året master på Universitet i Oslo</p>
@@ -57,7 +79,8 @@ function HomePage() {
                     <HoverLinkList />
                 </div>
             </div>
-            <Background />
+            <Background sortType={sortType} />
+            <SortingButton />
         </div>
     )
 }
