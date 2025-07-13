@@ -1,6 +1,7 @@
 import '../../index.css';
 import { useState } from 'react';
 import hoverLinksJson from '../../assets/hover_links.json'
+import Background from './components/Background';
 
 type HoverLinkProps = {
     content: string;
@@ -34,7 +35,7 @@ function HomePage() {
 
         return (
             <a
-                className="text-white"
+                className="text-3xl"
                 href={link}
                 target={target}
                 rel="noreferrer"
@@ -45,10 +46,18 @@ function HomePage() {
     }
 
     return (
-        <div className="flex w-screen h-screen justify-center items-center">
-            <div className="p-4 border bg-gray-700">
-                <HoverLinkList />
+        <div className="flex w-screen h-screen justify-center items-center relative">
+            <div className="p-8 bg-gray-900/95 rounded-2xl text-center w-1/4 z-10">
+                <header className="flex flex-col gap-4">
+                    <h1>Velkommen!</h1>
+                    <p>Jeg heter Marius Angelo Eullaran Fredrichsen (derfor maef.no) og er en 22år gammal student som skal starte 1.året master på Universitet i Oslo</p>
+                </header>
+                <hr className="my-8" />
+                <div className="">
+                    <HoverLinkList />
+                </div>
             </div>
+            <Background />
         </div>
     )
 }
