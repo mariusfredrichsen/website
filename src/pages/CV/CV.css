@@ -1,62 +1,70 @@
 @import "tailwindcss";
 
-
 body {
-    @apply bg-gray-950 text-gray-50;
+	@apply bg-gray-950 text-gray-50;
 }
 
-h1, h2, h3, h4, h5 {
-    @apply font-mono font-bold;
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	@apply font-mono font-bold;
 }
 
 html {
-    @apply text-base;
+	@apply text-base;
 }
 
 h1 {
-    @apply text-5xl;
+	@apply text-5xl;
 }
 
 h2 {
-    @apply text-4xl;
+	@apply text-4xl;
 }
 
 h3 {
-    @apply text-3xl;
+	@apply text-3xl;
 }
 
 h4 {
-    @apply text-2xl;
+	@apply text-2xl;
 }
 
 h5 {
-    @apply text-base;
+	@apply text-base;
 }
 
 small {
-    @apply text-xs;
+	@apply text-xs;
 }
 
 a {
-    @apply text-orange-500 no-underline;
+	@apply text-orange-500 no-underline;
 }
 
 .date {
-    @apply text-gray-500 text-sm m-0;
+	@apply text-gray-500 text-sm m-0;
 }
 
 .card-1 {
-    @apply bg-gray-900 p-8 rounded-2xl text-center max-w-[max(30vw,600px)] w-full;
+	@apply bg-gray-900 p-8 rounded-2xl text-center max-w-[max(30vw,600px)] w-full;
 }
 
 .card-1 div {
-    @apply text-left;
+	@apply text-left;
 }
 
-hr {
-    @apply my-8;
+.card-2 {
+	@apply bg-gray-800 rounded-2xl p-4;
+}
+
+.card-1 > hr {
+	@apply my-8;
 }
 
 ul {
-    @apply list-disc list-outside ps-6;
+	@apply list-disc list-outside ps-6;
 }

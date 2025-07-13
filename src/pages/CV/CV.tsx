@@ -5,7 +5,10 @@ type CVContent = {
     experience: Experience[];
     education: Education[];
     projects: Project[];
+    other: Other[],
+    referances: Referance[];
 };
+
 
 type Experience = {
     title: string;
@@ -14,23 +17,24 @@ type Experience = {
     description: DescriptionItem[];
 }
 
-type DescriptionItem = (List | Text | Link)[]
+type DescriptionItem = (List | Text | Link)
 
 type List = {
-    type: "list",
-    content: DescriptionItem[]
-}
+    type: "list";
+    content: DescriptionItem[][];
+};
 
 type Text = {
     type: "text";
     content: string;
-}
+};
 
 type Link = {
     type: "link";
     content: string;
     href: string;
-}
+};
+
 
 type Education = {
     educational_institution: string;
@@ -42,8 +46,9 @@ type Education = {
 
 type Semester = {
     number: string;
-    courses: Link[];
+    courses: DescriptionItem[];
 }
+
 
 type Project = {
     title: string;
@@ -56,22 +61,33 @@ type Technology = {
 }
 
 
+type Other = {
+    title: string;
+    description: string;
+}
+
+
+type Referance = {
+    title: string;
+}
+
+
 
 function parseDescription(description: DescriptionItem[]) {
-    return description.map((it1, index) => {
+    return description.map((it1, index1) => {
         switch (it1.type) {
             case "list":
                 return (
-                    <ul key={index}>
-                        {it1.content.map((it2, index) => {
-                            return <li key={index}>{parseDescription(it2)}</li>
+                    <ul key={index1}>
+                        {it1.content.map((it2, index2) => {
+                            return <li key={index2}>{parseDescription(it2)}</li>
                         })}
                     </ul>
                 )
             case "text":
-                return <span key={index}>{it1.content}</span>
+                return <span key={index1}>{it1.content}</span>
             case "link":
-                return <a key={index} href={it1.href}>{it1.content}</a>;
+                return <a key={index1} href={it1.href}>{it1.content}</a>;
             default:
                 return <></>;
         }
@@ -79,7 +95,7 @@ function parseDescription(description: DescriptionItem[]) {
 }
 
 function CV() {
-    const cvContent: CVContent = cvContentJson
+    const cvContent = cvContentJson as CVContent;
 
     return (
         <div className="flex flex-col items-center p-32 gap-8">
@@ -120,19 +136,38 @@ function CV() {
                     <h2>Utdanning</h2>
                 </header>
                 <hr />
-                {
-                    cvContent.education.map((it, index) => {
-                        return (
-                            <div key={index}>
-                                <header>
-                                    <h4><strong>{it.educational_institution}</strong></h4>
-                                    <p className="date">{it.date_from} - {it.date_to}</p>
-                                    <p>{it.title_of_education}</p>
-                                </header>
-                            </div>
-                        )
-                    })
-                }
+                <div className="flex flex-col gap-8">
+                    {
+                        cvContent.education.map((it1, index1) => {
+                            return (
+                                <div key={index1} className="flex flex-col divide-gray-500">
+                                    <header>
+                                        <h4><strong>{it1.title_of_education}</strong></h4>
+                                        <p className="date">{it1.date_from} - {it1.date_to}</p>
+                                        <p>{it1.educational_institution}</p>
+                                    </header>
+                                    {
+                                        it1.semesters.map((it2, index2) => {
+                                            return (
+                                                <>
+                                                    <hr className="my-4" />
+                                                    <div key={index2}>
+                                                        <div>
+                                                            <header>
+                                                                <h5>{it2.number}. Semester {(index1 === 0 && index2 === 0) ? "(while true):" : ""}</h5>
+                                                            </header>
+                                                            {parseDescription(it2.courses)}
+                                                        </div>
+                                                    </div>
+                                                </>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
 
             <div className="card-1">
@@ -140,21 +175,49 @@ function CV() {
                     <h2>Prosjekter</h2>
                 </header>
                 <hr />
-                {
-                    cvContent.projects.map((it1, index) => {
-                        return (
-                            <div key={index}>
-                                <header>
-                                    <h4><strong>{it1.title}</strong></h4>
-                                    <p className="date">Teknologier: {it1.technologies.map((it2) => it2.name).join(", ")}</p>
-                                </header>
-                                <div>
-                                    {parseDescription(it1.description)}
+                <div className="flex flex-col gap-8">
+                    {
+                        cvContent.projects.map((it1, index) => {
+                            return (
+                                <div key={index}>
+                                    <header>
+                                        <h4><strong>{it1.title}</strong></h4>
+                                        <p className="date">Teknologier: {it1.technologies.map((it2) => it2.name).join(", ")}</p>
+                                    </header>
+                                    <div>
+                                        {parseDescription(it1.description)}
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })
-                }
+                            )
+                        })
+                    }
+                </div>
+            </div>
+
+            <div className="card-1">
+                <header>
+                    <h2>Annet</h2>
+                </header>
+                <hr />
+                <div className="flex flex-col">
+                    {
+                        cvContent.other.map((it1, index) => {
+                            return (
+                                <p key={index}>{it1.title} - {it1.description}</p>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+
+            <div className="card-1">
+                <header>
+                    <h2>Referanser</h2>
+                </header>
+                <hr />
+                <div className="flex flex-col">
+                    <p>{cvContent.referances[0].title}</p>
+                </div>
             </div>
         </div>
     )

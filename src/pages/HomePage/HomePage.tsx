@@ -3,8 +3,9 @@ import { useState } from 'react';
 import hoverLinksJson from '../../assets/hover_links.json'
 
 type HoverLinkProps = {
-    content: string,
-    link: string,
+    content: string;
+    link: string;
+    target: string;
 }
 
 function HomePage() {
@@ -16,10 +17,11 @@ function HomePage() {
             <div className="flex flex-col gap-4 items-center">
                 {
                     hoverLinks.map(element => (
-                        <Link 
+                        <Link
                             key={element.content}
                             content={element.content}
                             link={element.link}
+                            target={element.target}
                         />
                     ))
                 }
@@ -27,14 +29,14 @@ function HomePage() {
         )
     }
 
-    const Link = ({content, link}: HoverLinkProps) => {
+    const Link = ({ content, link, target }: HoverLinkProps) => {
         const [hovered, setHovered] = useState(false);
 
         return (
-            <a 
+            <a
                 className="text-white"
                 href={link}
-                target="_blank"
+                target={target}
                 rel="noreferrer"
                 onMouseEnter={() => { setHovered(true) }}
                 onMouseLeave={() => { setHovered(false) }}

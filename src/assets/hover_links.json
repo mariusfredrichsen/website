@@ -1,14 +1,22 @@
 [
-    {
-        "content": "GitHub",
-        "link": "https://github.com/mariusfredrichsen"
-    },
-    {
-        "content": "CV",
-        "link": "https://www.maef.no/cv"
-    },
-    {
-        "content": "LinkdIn",
-        "link": "https://www.linkedin.com/in/marius-fredrichsen/"
-    }
+	{
+		"content": "GitHub",
+		"link": "https://github.com/mariusfredrichsen",
+		"target": "_blank"
+	},
+	{
+		"content": "CV",
+		"link": "https://www.maef.no/cv",
+		"target": ""
+	},
+	{
+		"content": "LinkedIn",
+		"link": "https://www.linkedin.com/in/marius-fredrichsen/",
+		"target": "_blank"
+	},
+	{
+		"content": "Running",
+		"link": "https://www.maef.no/run",
+		"target": ""
+	}
 ]
