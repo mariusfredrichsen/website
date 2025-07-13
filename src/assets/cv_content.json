@@ -1,0 +1,239 @@
+{
+    "experience": [
+        {
+            "title": "Retter/Gruppelærer på Institutt for informatikk, Universitet i Oslo",
+            "date_from": "Jan-2025",
+            "date_to": "Jun-2025",
+            "description": [
+                {
+                    "type": "list",
+                    "content": [
+                        [
+                            {
+                                "type": "text",
+                                "content": "Holdt undervisning i "
+                            },
+                            {
+                                "type": "link",
+                                "content": "IN2000: Software Engineering med prosjektarbeid",
+                                "href": "https://www.uio.no/studier/emner/matnat/ifi/IN2000/"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Veiledet syv grupper på 6 studenter"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Hjulpet studenter i labtimer"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Rettet innleveringer"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Retter/Gruppelærer på Institutt for informatikk, Universitet i Oslo",
+            "date_from": "Aug-2024",
+            "date_to": "Des-2024",
+            "description": [
+                {
+                    "type": "list",
+                    "content": [
+                        [
+                            {
+                                "type": "text",
+                                "content": "Holdt undervisning i "
+                            },
+                            {
+                                "type": "link",
+                                "content": "IN2010: Algoritmer og datastrukturer",
+                                "href": "https://www.uio.no/studier/emner/matnat/ifi/IN2010/"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Hjulpet studenter i labtimer"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Rettet innleveringer"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Lærer på Sommerskolen Oslo via YoungCoderz",
+            "date_from": "Jun-2024",
+            "date_to": "Jul-2024",
+            "description": [
+                {
+                    "type": "list",
+                    "content": [
+                        [
+                            {
+                                "type": "text",
+                                "content": "Holdt undervisning om programmering for 5. og 6. klassinger"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Teknologier: Scratch, Sphero Edu, MS Arcade, CoSpaces Edu, Python"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Hjulpet barn med programmering"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Retter/Gruppelærer på Institutt for informatikk, Universitet i Oslo",
+            "date_from": "Aug-2023",
+            "date_to": "Jun-2024",
+            "description": [
+                {
+                    "type": "list",
+                    "content": [
+                        [
+                            {
+                                "type": "text",
+                                "content": "Holdt undervisning i "
+                            },
+                            {
+                                "type": "link",
+                                "content": "IN1000: Introduksjon til objektorientert programmering",
+                                "href": "https://www.uio.no/studier/emner/matnat/ifi/IN1000/"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Hjulpet studenter i labtimer"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Rettet innleveringer"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Gartner på Asker kirke",
+            "date_from": "Jun-2022",
+            "date_to": "Jul-2022",
+            "description": [
+                {
+                    "type": "list",
+                    "content": [
+                        [
+                            {
+                                "type": "text",
+                                "content": "Trimmet hekker og trær"
+                            }
+                        ],
+                        [
+                            {
+                                "type": "text",
+                                "content": "Klipping av gress med sitteklipper og kantklipper"
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ],
+    "education": [
+        {
+            "educational_institution": "Universitet i Oslo",
+            "title_of_education": "Informatikk: fritt sammensatt bachelor",
+            "date_from": "Aug-2022",
+            "date_to": "Jun-2025",
+            "semesters": [
+                {
+                    "number": "1",
+                    "courses": [
+                        {
+                            "type": "link",
+                            "content": "IN1000: Introduksjon til objektorientert programmering",
+                            "href": "https://www.uio.no/studier/emner/matnat/ifi/IN1000/"
+                        },
+                        {
+                            "type": "link",
+                            "content": "IN1020: Introduksjon til datateknologi",
+                            "href": "https://www.uio.no/studier/emner/matnat/ifi/IN1020/"
+                        },
+                        {
+                            "type": "link",
+                            "content": "IN1050: Introduksjon til design, bruk, interaksjon",
+                            "href": "https://www.uio.no/studier/emner/matnat/ifi/IN1050/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Tangent Trim",
+            "technologies": [
+                {
+                    "name": "Arduino"
+                },
+                {
+                    "name": "GitHub"
+                },
+                {
+                    "name": "Autodesk Fusion"
+                }
+            ],
+            "description": [
+                {
+                    "type": "text",
+                    "content": "Et design-prosjekt i "
+                },
+                {
+                    "type": "link",
+                    "content": "IN1060: Bruksorientert design",
+                    "href": "https://www.uio.no/studier/emner/matnat/ifi/IN1060"
+                },
+                {
+                    "type": "text",
+                    "content": " som handler om designprosessen og digital/fysisk prototyping for en valgt brukergruppe. Mer info om prosjektet "
+                },
+                {
+                    "type": "link",
+                    "content": "her",
+                    "href": "https://www.uio.no/studier/emner/matnat/ifi/IN1060/v23/prosjekter-var-2023/designerne.ino/"
+                },
+                {
+                    "type": "text",
+                    "content": "."
+                }
+            ]
+        }
+    ]
+}
