@@ -95,8 +95,7 @@ function Background({ sortType }: { sortType: string }) {
     return (
         <div
             ref={divRef}
-            className="absolute top-0 left-0 w-screen h-screen overflow-x-clip font-mono text-orange-500/50 text-6xl text-center flex items-center justify-center select-none pointer-events-none"
-            aria-hidden="true"
+            className="absolute inset-0 w-screen h-screen overflow-x-clip font-mono text-orange-500/50 text-center flex items-center justify-center select-none pointer-events-none text-[clamp(1.5rem,4vw,2.5rem)]"
         >
             {numbers.map((num) => {
                 const numString = num.toString();

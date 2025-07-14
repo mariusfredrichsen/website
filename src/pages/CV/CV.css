@@ -49,7 +49,7 @@ a {
 }
 
 .card-1 {
-	@apply bg-gray-900 p-8 rounded text-center max-w-[max(30vw,600px)] w-full;
+	@apply bg-gray-900 p-8 rounded text-center w-[min(90vw,600px)] mx-auto;
 }
 
 .card-1 div {

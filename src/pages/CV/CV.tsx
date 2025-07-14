@@ -98,10 +98,10 @@ function CV() {
     const cvContent = cvContentJson as CVContent;
 
     return (
-        <div className="flex flex-col items-center p-32 gap-8">
-            <header className="flex flex-col items-center">
-                <h1 className="mb-16">Marius Fredrichsen</h1>
-                <div className="mb-16">
+        <div className="flex flex-col items-center pt-32 gap-8">
+            <header className="flex flex-col items-center w-[min(90vw,600px)] mx-auto">
+                <h1 className="mb-16 text-center ">Marius Fredrichsen</h1>
+                <div className="mb-16 text-left">
                     <p>Adresse: Oslo (mer detaljer oppgis ved forespørsel)</p>
                     <p>Telefon: <a href="tel:+4794141698">+47 941 41 698</a></p>
                     <p>Epost: <a href="mailto:mariusfredrichsen@gmail.com">mariusfredrichsen@gmail.com</a></p>

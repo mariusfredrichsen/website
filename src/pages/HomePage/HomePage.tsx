@@ -69,7 +69,7 @@ function HomePage() {
 
     return (
         <div className="flex w-screen h-screen justify-center items-center relative">
-            <div className="p-8 bg-gray-900/95 rounded text-center w-1/4 z-10">
+            <div className="p-8 bg-gray-900/95 rounded text-center w-[min(90vw,600px)] mx-auto z-10">
                 <header className="flex flex-col gap-4">
                     <h1>Velkommen!</h1>
                     <p>Jeg heter Marius Angelo Eullaran Fredrichsen (derfor maef.no) og er en 22år gammal student som skal starte 1.året master på Universitet i Oslo</p>

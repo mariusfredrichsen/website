@@ -413,6 +413,13 @@
 					]
 				}
 			]
+		},
+		{
+			"educational_institution": "Videregående skole i Drammen",
+			"title_of_education": "Studiespesialiserende med forskerlinje",
+			"date_from": "Aug-2018",
+			"date_to": "Jun-2021",
+			"semesters": []
 		}
 	],
 	"projects": [
