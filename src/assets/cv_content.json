@@ -1,6 +1,35 @@
 {
 	"experience": [
 		{
+			"title": "Gruppelærer på Institutt for informatikk, Universitet i Oslo",
+			"date_from": "Aug-2025",
+			"date_to": "Des-2025",
+			"description": [
+				{
+					"type": "list",
+					"content": [
+						[
+							{
+								"type": "text",
+								"content": "Holdt labtimer i "
+							},
+							{
+								"type": "link",
+								"content": "IN5320: Development in platform ecosystems",
+								"href": "https://www.uio.no/studier/emner/matnat/ifi/IN5320/"
+							}
+						],
+						[
+							{
+								"type": "text",
+								"content": "Rettet innleveringer"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
 			"title": "Retter/Gruppelærer på Institutt for informatikk, Universitet i Oslo",
 			"date_from": "Jan-2025",
 			"date_to": "Jun-2025",
@@ -22,7 +51,7 @@
 						[
 							{
 								"type": "text",
-								"content": "Veiledet syv grupper på 6 studenter"
+								"content": "Veiledet syv grupper på seks studenter hver"
 							}
 						],
 						[
@@ -169,7 +198,7 @@
 	"education": [
 		{
 			"educational_institution": "Universitet i Oslo",
-			"title_of_education": "Master i informatikk - Programmering og system arkitektur",
+			"title_of_education": "Master i informatikk - Programmering og systemarkitektur",
 			"date_from": "Aug-2025",
 			"date_to": "Jun-2027",
 			"semesters": [
@@ -424,6 +453,135 @@
 	],
 	"projects": [
 		{
+			"title": "Denne nettsiden",
+			"technologies": [
+				{ "name": "React" },
+				{ "name": "Tailwind CSS" },
+				{ "name": "JavaScript" },
+				{ "name": "HTML" },
+				{ "name": "Nginx" }
+			],
+			"description": [
+				{
+					"type": "text",
+					"content": "En nettside laget med react rammeverket. Noen features er:"
+				},
+				{
+					"type": "list",
+					"content": [
+						[
+							{
+								"type": "text",
+								"content": "parsing av json data som viser det du leser nå"
+							}
+						],
+						[
+							{
+								"type": "text",
+								"content": "visualisering av sorterings algoritmer"
+							}
+						],
+						[
+							{
+								"type": "text",
+								"content": "visualisering av "
+							},
+							{
+								"type": "link",
+								"content": "strava",
+								"href": "https://www.strava.com/athletes/74137055"
+							},
+							{
+								"type": "text",
+								"content": " dataen min"
+							}
+						],
+						[
+							{
+								"type": "text",
+								"content": "visualisering av prosjektene mine (WIP)"
+							}
+						]
+					]
+				},
+				{
+					"type": "text",
+					"content": "Mer info "
+				},
+				{
+					"type": "link",
+					"content": "her",
+					"href": "https://github.com/mariusfredrichsen/website"
+				},
+				{
+					"type": "text",
+					"content": "."
+				}
+			]
+		},
+		{
+			"title": "Lingonaut (WIP)",
+			"technologies": [
+				{ "name": "Next.js" },
+				{ "name": "GitHub" },
+				{ "name": "HTML" },
+				{ "name": "JavaScript" },
+				{ "name": "Tailwind CSS" },
+				{ "name": "MongoDB" }
+			],
+			"description": [
+				{
+					"type": "text",
+					"content": "'Lingo' som i språk og 'naut' som i å utforske. "
+				},
+				{
+					"type": "text",
+					"content": "En nettside som lar deg lære språk ved å legge inn dine egne oversettelser og få andre som kan språket til å komme med forslag til endringer. Mer info "
+				},
+				{
+					"type": "link",
+					"content": "her",
+					"href": "https://github.com/mariusfredrichsen/lingonaut"
+				},
+				{ "type": "text", "content": "." }
+			]
+		},
+		{
+			"title": "BåtBuddy",
+			"technologies": [
+				{ "name": "Android Studio" },
+				{ "name": "Kotlin" },
+				{ "name": "SQL" },
+				{ "name": "Figma" },
+				{ "name": "Python" }
+			],
+			"description": [
+				{
+					"type": "text",
+					"content": "Et gruppe-prosjekt i "
+				},
+				{
+					"type": "link",
+					"content": "IN2000: Software Engineering med prosjektarbeid",
+					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN2000/"
+				},
+				{
+					"type": "text",
+					"content": " som handler om å lage en Android App som bruker vær dataen til Meteorologisk institutt. "
+				},
+				{
+					"type": "text",
+					"content": "I tillegg vant gruppen en pris. Mer info om prosjektet "
+				},
+				{
+					"type": "link",
+					"content": "her",
+					"href": "https://github.com/BaatBuddy/BaatBuddy"
+				},
+				{ "type": "text", "content": "." }
+			]
+		},
+		{
 			"title": "Tangent Trim",
 			"technologies": [
 				{ "name": "Arduino" },
@@ -448,40 +606,6 @@
 					"type": "link",
 					"content": "her",
 					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN1060/v23/prosjekter-var-2023/designerne.ino/"
-				},
-				{ "type": "text", "content": "." }
-			]
-		},
-		{
-			"title": "BåtBuddy",
-			"technologies": [
-				{ "name": "Android Studio" },
-				{ "name": "Kotlin" },
-				{ "name": "SQL" },
-				{ "name": "Figma" }
-			],
-			"description": [
-				{
-					"type": "text",
-					"content": "Et gruppe-prosjekt i "
-				},
-				{
-					"type": "link",
-					"content": "IN2000: Software Engineering med prosjektarbeid",
-					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN2000/"
-				},
-				{
-					"type": "text",
-					"content": " som handler om å lage en Android App som bruker vær dataen til Meteorologisk institutt. "
-				},
-				{
-					"type": "text",
-					"content": "I tillegg vant gruppen en pris. Mer info om prosjektet "
-				},
-				{
-					"type": "link",
-					"content": "her",
-					"href": "https://github.com/BaatBuddy/BaatBuddy"
 				},
 				{ "type": "text", "content": "." }
 			]
@@ -555,28 +679,6 @@
 					"type": "link",
 					"content": "her",
 					"href": "https://github.com/mariusfredrichsen/discordbot"
-				},
-				{ "type": "text", "content": "." }
-			]
-		},
-		{
-			"title": "Denne nettsiden",
-			"technologies": [
-				{ "name": "React" },
-				{ "name": "CSS" },
-				{ "name": "HTML" },
-				{ "name": "Nginx" },
-				{ "name": "Tailwind" }
-			],
-			"description": [
-				{
-					"type": "text",
-					"content": "En nettside laget med react rammeverket. Mer info "
-				},
-				{
-					"type": "link",
-					"content": "her",
-					"href": "https://github.com/mariusfredrichsen/website"
 				},
 				{ "type": "text", "content": "." }
 			]

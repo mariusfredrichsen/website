@@ -9,12 +9,7 @@ type HoverLinkProps = {
     target: string;
 }
 
-type SortType = "bubble" | "select" | "insert";
-
 function HomePage() {
-    const [sortType, setSortType] = useState<SortType>("insert");
-
-
     const hoverLinks: HoverLinkProps[] = hoverLinksJson
 
     const HoverLinkList = () => {
@@ -49,23 +44,7 @@ function HomePage() {
         )
     }
 
-    const SortingButton = () => {
 
-        return (
-            <button
-                className="absolute top-8 right-8 bg-gray-600 text-white px-4 py-2 rounded z-20"
-                onClick={() => {
-                    setSortType(prev => {
-                        if (prev === "bubble") return "select";
-                        if (prev === "select") return "insert";
-                        return "bubble";
-                    });
-                }}
-            >
-                Sort: {sortType.charAt(0).toUpperCase() + sortType.slice(1)}
-            </button>
-        )
-    }
 
     return (
         <div className="flex w-screen h-screen justify-center items-center relative">
@@ -79,8 +58,7 @@ function HomePage() {
                     <HoverLinkList />
                 </div>
             </div>
-            <Background sortType={sortType} />
-            <SortingButton />
+            <Background />
         </div>
     )
 }
