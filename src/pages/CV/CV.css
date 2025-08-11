@@ -49,7 +49,7 @@ a {
 }
 
 .card-1 {
-	@apply bg-gray-900 p-8 rounded text-center w-[min(90vw,600px)] mx-auto;
+	@apply bg-gray-900 p-8 rounded text-center;
 }
 
 .card-1 div {
@@ -66,4 +66,88 @@ a {
 
 ul {
 	@apply list-disc list-outside ps-6;
+}
+
+.container-layout {
+	@apply grid gap-8 justify-center;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"projects"
+		"experience"
+		"education"
+		"other"
+		"references";
+}
+
+.projects-layout {
+	@apply grid gap-8;
+	grid-template-columns: 1fr;
+}
+
+.projects-list {
+	@apply grid gap-8;
+	grid-column: span 2;
+	grid-template-columns: 1fr;
+}
+
+.technologies-list {
+	@apply grid gap-x-8;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+	.container-layout {
+		@apply max-w-3/4 m-auto;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-areas:
+			"projects projects"
+			"experience education"
+			"other references";
+	}
+
+	.projects-layout {
+		grid-template-columns: 2fr 2fr 1fr;
+	}
+
+	.projects-list {
+		grid-column: span 2;
+		@apply grid gap-4;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.technologies-list {
+		grid-template-columns: 1fr;
+	}
+
+	.technologies {
+		grid-column: 3 / 4;
+	}
+}
+
+.project {
+	grid-column: auto;
+}
+
+.technologies {
+	grid-column: auto;
+}
+
+.projects {
+	grid-area: projects;
+}
+
+.experience {
+	grid-area: experience;
+}
+
+.education {
+	grid-area: education;
+}
+
+.other {
+	grid-area: other;
+}
+
+.references {
+	grid-area: references;
 }

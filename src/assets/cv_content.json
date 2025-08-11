@@ -520,97 +520,6 @@
 			]
 		},
 		{
-			"title": "Lingonaut (WIP)",
-			"technologies": [
-				{ "name": "Next.js" },
-				{ "name": "GitHub" },
-				{ "name": "HTML" },
-				{ "name": "JavaScript" },
-				{ "name": "Tailwind CSS" },
-				{ "name": "MongoDB" }
-			],
-			"description": [
-				{
-					"type": "text",
-					"content": "'Lingo' som i språk og 'naut' som i å utforske. "
-				},
-				{
-					"type": "text",
-					"content": "En nettside som lar deg lære språk ved å legge inn dine egne oversettelser og få andre som kan språket til å komme med forslag til endringer. Mer info "
-				},
-				{
-					"type": "link",
-					"content": "her",
-					"href": "https://github.com/mariusfredrichsen/lingonaut"
-				},
-				{ "type": "text", "content": "." }
-			]
-		},
-		{
-			"title": "BåtBuddy",
-			"technologies": [
-				{ "name": "Android Studio" },
-				{ "name": "Kotlin" },
-				{ "name": "SQL" },
-				{ "name": "Figma" },
-				{ "name": "Python" }
-			],
-			"description": [
-				{
-					"type": "text",
-					"content": "Et gruppe-prosjekt i "
-				},
-				{
-					"type": "link",
-					"content": "IN2000: Software Engineering med prosjektarbeid",
-					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN2000/"
-				},
-				{
-					"type": "text",
-					"content": " som handler om å lage en Android App som bruker vær dataen til Meteorologisk institutt. "
-				},
-				{
-					"type": "text",
-					"content": "I tillegg vant gruppen en pris. Mer info om prosjektet "
-				},
-				{
-					"type": "link",
-					"content": "her",
-					"href": "https://github.com/BaatBuddy/BaatBuddy"
-				},
-				{ "type": "text", "content": "." }
-			]
-		},
-		{
-			"title": "Tangent Trim",
-			"technologies": [
-				{ "name": "Arduino" },
-				{ "name": "GitHub" },
-				{ "name": "Autodesk Fusion 360" }
-			],
-			"description": [
-				{
-					"type": "text",
-					"content": "Et design-prosjekt i "
-				},
-				{
-					"type": "link",
-					"content": "IN1060: Bruksorientert design",
-					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN1060"
-				},
-				{
-					"type": "text",
-					"content": " som handler om designprosessen og digital/fysisk prototyping for en valgt brukergruppe. Mer info om prosjektet "
-				},
-				{
-					"type": "link",
-					"content": "her",
-					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN1060/v23/prosjekter-var-2023/designerne.ino/"
-				},
-				{ "type": "text", "content": "." }
-			]
-		},
-		{
 			"title": "Discord-bot",
 			"technologies": [
 				{ "name": "Python" },
@@ -679,6 +588,125 @@
 					"type": "link",
 					"content": "her",
 					"href": "https://github.com/mariusfredrichsen/discordbot"
+				},
+				{ "type": "text", "content": "." }
+			]
+		},
+		{
+			"title": "Lingonaut (WIP)",
+			"technologies": [
+				{ "name": "Next.js" },
+				{ "name": "GitHub" },
+				{ "name": "HTML" },
+				{ "name": "JavaScript" },
+				{ "name": "Tailwind CSS" },
+				{ "name": "MongoDB" }
+			],
+			"description": [
+				{
+					"type": "text",
+					"content": "'Lingo' som i språk og 'naut' som i å utforske. "
+				},
+				{
+					"type": "text",
+					"content": "En nettside som lar deg lære språk ved å legge inn dine egne oversettelser og få andre som kan språket til å komme med forslag til endringer. Mer info "
+				},
+				{
+					"type": "link",
+					"content": "her",
+					"href": "https://github.com/mariusfredrichsen/lingonaut"
+				},
+				{ "type": "text", "content": "." }
+			]
+		},
+		{
+			"title": "BåtBuddy",
+			"technologies": [
+				{ "name": "Android Studio" },
+				{ "name": "Kotlin" },
+				{ "name": "SQL" },
+				{ "name": "Figma" },
+				{ "name": "Python" },
+				{ "name": "Java" }
+			],
+			"description": [
+				{
+					"type": "text",
+					"content": "Et gruppe-prosjekt i "
+				},
+				{
+					"type": "link",
+					"content": "IN2000: Software Engineering med prosjektarbeid",
+					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN2000/"
+				},
+				{
+					"type": "text",
+					"content": " som handler om å lage en Android App som bruker vær dataen til Meteorologisk institutt. "
+				},
+				{
+					"type": "text",
+					"content": "I tillegg vant gruppen en pris. Mer info om prosjektet "
+				},
+				{
+					"type": "link",
+					"content": "her",
+					"href": "https://github.com/BaatBuddy/BaatBuddy"
+				},
+				{ "type": "text", "content": "." }
+			]
+		},
+		{
+			"title": "Bokskap nettside for FUI",
+			"technologies": [
+				{ "name": "React" },
+				{ "name": "Tailwind CSS" },
+				{ "name": "JavaScript" },
+				{ "name": "HTML" },
+				{ "name": "Django" },
+				{ "name": "Python" },
+				{ "name": "Node" }
+			],
+			"description": [
+				{
+					"type": "text",
+					"content": " Digitaliserings prosjekt med 5 andre studenter. En nettside som skal hjelpe "
+				},
+				{
+					"type": "link",
+					"content": "Fagutvalget ved Institutt for informatikk",
+					"href": "https://ififui.no/"
+				},
+				{
+					"type": "text",
+					"content": " å drifte bokskapene på universitets bygget til informatikk."
+				}
+			]
+		},
+		{
+			"title": "Tangent Trim",
+			"technologies": [
+				{ "name": "Arduino (C++)" },
+				{ "name": "GitHub" },
+				{ "name": "Autodesk Fusion 360" }
+			],
+			"description": [
+				{
+					"type": "text",
+					"content": "Et design-prosjekt i "
+				},
+				{
+					"type": "link",
+					"content": "IN1060: Bruksorientert design",
+					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN1060"
+				},
+				{
+					"type": "text",
+					"content": " som handler om designprosessen og digital/fysisk prototyping for en valgt brukergruppe. Mer info om prosjektet "
+				},
+				{
+					"type": "link",
+					"content": "her",
+					"href": "https://www.uio.no/studier/emner/matnat/ifi/IN1060/v23/prosjekter-var-2023/designerne.ino/"
 				},
 				{ "type": "text", "content": "." }
 			]
