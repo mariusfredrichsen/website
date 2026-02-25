@@ -6,6 +6,11 @@ const config: Config = {
 	collectCoverage: true,
 	coverageDirectory: "coverage",
 	coverageReporters: ["lcov", "text"],
+	collectCoverageFrom: [
+		"src/**/*.{ts,tsx}",
+		"!**/node_modules/**",
+		"!**/vendor/**",
+	],
 };
 
 export default config;
