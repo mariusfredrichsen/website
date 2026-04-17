@@ -7,6 +7,7 @@ import L from 'leaflet';
 import stravaLogo from '../../assets/stravaLogo.svg';
 import stravaData from '../../assets/stravaData.json';
 import countryData from '../../assets/countryData.json'
+import './Run.css';
 
 
 type GeoJSONGeometry = {
@@ -143,7 +144,20 @@ function Run() {
 
     return (
         <div className="w-screen h-screen p-4 bg-gray-900 flex flex-col gap-8">
+            <div className="flex p-4 bg-gray-800 justify-between rounded">
+                <div className="flex items-center gap-1 whitespace-nowrap text-2xl ">
+                    <div className="flex items-center -space-x-1">
+                        <a href="https://maef.no"
+                            target="_blank"
+                            rel="noopener noreferrer">&lt;-- Home page</a>
+                    </div>
+                </div>
+                <div className="w-full p-8 flex justify-center items-center bg-gray-800">
+                    <div className="justify-start text-5xl font-normal"><strong><span>My</span> <span className="text-orange-500">Strava</span> <span>Run Data</span></strong></div>
+                </div>
+            </div>
             <div className="flex h-full gap-8 flex-col md:flex-row">
+
                 <div className="relative w-full self-stretch bg-gray-800 rounded flex flex-col flex-1/4 overflow-auto">
                     {showTopShadow && (
                         <div className="absolute top-0 left-0 right-0 h-6 pointer-events-none z-20 shadow-[inset_0_16px_16px_-8px_rgba(0,0,0,0.5)]" />
@@ -155,7 +169,7 @@ function Run() {
 
                     <div ref={scrollRef} className="overflow-auto flex flex-col h-full">
                         <div className="w-full p-8 border-b flex justify-center items-center bg-gray-800">
-                            <div className="justify-start text-5xl font-normal"><strong>Countries</strong></div>
+                            <div className="justify-start text-4xl font-normal"><strong>Countries</strong></div>
                         </div>
 
                         {Array.from(countryActivities.entries()).map(([country, activities]) => (

@@ -1,4 +1,2 @@
-declare function Background({ sortType }: {
-    sortType: string;
-}): import("react/jsx-runtime").JSX.Element;
+declare function Background(): import("react/jsx-runtime").JSX.Element;
 export default Background;

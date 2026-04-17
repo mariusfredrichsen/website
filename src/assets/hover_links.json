@@ -18,5 +18,15 @@
 		"content": "Running",
 		"link": "https://www.maef.no/run",
 		"target": ""
+	},
+	{
+		"content": "Lart",
+		"link": "https://www.maef.no/lart",
+		"target": ""
+	},
+	{
+		"content": "Master",
+		"link": "https://www.maef.no/master",
+		"target": ""
 	}
 ]

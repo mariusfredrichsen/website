@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+a {
+	@apply text-orange-500 no-underline;
+}
