@@ -203,6 +203,30 @@
 			"date_to": "Jun-2027",
 			"semesters": [
 				{
+					"number": "2",
+					"courses": [
+						{
+							"type": "list",
+							"content": [
+								[
+									{
+										"type": "link",
+										"content": "IN4240: Testing av programvare",
+										"href": "https://www.uio.no/studier/emner/matnat/ifi/IN4240/"
+									}
+								],
+								[
+									{
+										"type": "link",
+										"content": "IN4310: Deep Learning for Image Analysis",
+										"href": "https://www.uio.no/studier/emner/matnat/ifi/IN4310/"
+									}
+								]
+							]
+						}
+					]
+				},
+				{
 					"number": "1",
 					"courses": [
 						{
