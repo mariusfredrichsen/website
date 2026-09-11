@@ -1,13 +1,18 @@
 [
 	{
+		"content": "CV",
+		"link": "/cv",
+		"target": ""
+	},
+	{
+		"content": "Projects",
+		"link": "/projects",
+		"target": ""
+	},
+	{
 		"content": "GitHub",
 		"link": "https://github.com/mariusfredrichsen",
 		"target": "_blank"
-	},
-	{
-		"content": "CV",
-		"link": "https://www.maef.no/cv",
-		"target": ""
 	},
 	{
 		"content": "LinkedIn",
@@ -16,7 +21,7 @@
 	},
 	{
 		"content": "Running",
-		"link": "https://www.maef.no/run",
+		"link": "/run",
 		"target": ""
 	}
 ]

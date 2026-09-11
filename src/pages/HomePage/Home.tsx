@@ -9,7 +9,7 @@ type HoverLinkProps = {
     target: string;
 }
 
-function HomePage() {
+function Home() {
     const hoverLinks: HoverLinkProps[] = hoverLinksJson
 
     const HoverLinkList = () => {
@@ -63,4 +63,4 @@ function HomePage() {
     )
 }
 
-export default HomePage;
+export default Home;
