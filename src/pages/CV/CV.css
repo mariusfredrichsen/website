@@ -52,6 +52,11 @@
 	--accent-dark: #c2410c;
 }
 
+.cv-page :focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+}
+
 .cv-doc {
 	position: relative;
 	box-sizing: border-box;
@@ -528,6 +533,10 @@
 	margin-top: 2px;
 }
 
+.cv-item-tech {
+	margin-top: 7px;
+}
+
 .cv-item-desc {
 	margin: 7px 0 0;
 	font-size: 13px;
@@ -636,6 +645,23 @@
 	font-size: 12.5px;
 	line-height: 1.5;
 	color: var(--text-3);
+}
+
+.cv-project-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 14px;
+	margin: 0 0 12px;
+	font-size: 11px;
+}
+
+.cv-project-links a {
+	color: var(--accent-dark);
+	text-decoration: none;
+}
+
+.cv-project-links a:hover {
+	color: var(--text);
 }
 
 .cv-project-read-more {

@@ -1,0 +1,583 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+/* Projects index and detail. Same look and variable values as the CV (dark),
+   all scoped under .projects-page so nothing leaks into other pages. */
+
+.projects-page {
+	--accent: #f97316;
+	--bg: #030712;
+	--text: #f9fafb;
+	--text-2: #e5e7eb;
+	--text-3: #d1d5db;
+	--text-4: #9ca3af;
+	--muted: #6b7280;
+	--card: #1f2937;
+	--band: #111827;
+	--chip: #374151;
+	--accent-dark: #fb923c;
+
+	min-height: 100vh;
+	overflow-x: clip;
+	background: var(--bg);
+	color: var(--text);
+	font-family: "Hanken Grotesk", system-ui, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.projects-page a {
+	color: var(--accent-dark);
+	text-decoration: none;
+}
+
+.projects-page a:hover {
+	color: var(--text);
+}
+
+.projects-page :focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+}
+
+.projects-page .pj-mono {
+	font-family: "JetBrains Mono", monospace;
+}
+
+.projects-page .pj-spacer {
+	flex: 1;
+}
+
+/* ── Toolbar ──────────────────────────────────────────── */
+
+.projects-page .pj-toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px 16px;
+	padding: 12px clamp(16px, 4vw, 32px);
+	background: color-mix(in srgb, var(--bg) 86%, transparent);
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid var(--chip);
+}
+
+.projects-page .pj-backlink {
+	font-size: 12px;
+	color: var(--text-4);
+}
+
+.projects-page .pj-nav {
+	display: flex;
+	gap: 18px;
+	font-size: 12px;
+}
+
+.projects-page .pj-navlink {
+	color: var(--text-4);
+}
+
+.projects-page .pj-navlink[aria-current="page"] {
+	color: var(--text);
+}
+
+.projects-page .pj-navlink:hover .pj-sp {
+	display: none;
+}
+
+.projects-page .pj-counter {
+	font-size: 11px;
+	color: var(--muted);
+}
+
+/* ── Buttons, toggles ─────────────────────────────────── */
+
+.projects-page .pj-btn {
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 7px 13px;
+	background: var(--card);
+	color: var(--text-2);
+	border: 1px solid var(--chip);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.projects-page .pj-btn:hover {
+	color: var(--text);
+}
+
+.projects-page .pj-seg-group {
+	display: inline-flex;
+	flex-wrap: wrap;
+	border: 1px solid var(--chip);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.projects-page .pj-seg,
+.projects-page .pj-toggle {
+	font-family: "JetBrains Mono", monospace;
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	min-height: 36px;
+}
+
+.projects-page .pj-seg {
+	border: none;
+	border-radius: 0;
+}
+
+.projects-page .pj-seg + .pj-seg {
+	border-left: 1px solid var(--chip);
+}
+
+.projects-page .pj-btn-active,
+.projects-page .pj-btn-active:hover {
+	background: var(--accent);
+	color: var(--bg);
+	font-weight: 700;
+}
+
+.projects-page .pj-toggle-on {
+	color: var(--text);
+	border-color: var(--accent);
+}
+
+.projects-page .pj-divider {
+	width: 1px;
+	height: 24px;
+	background: var(--chip);
+}
+
+/* ── Page frame, header panel ─────────────────────────── */
+
+.projects-page .pj-doc {
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 48px clamp(16px, 4vw, 32px) 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.projects-page .pj-header {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	padding: 28px 32px;
+	background: var(--band);
+	border: 1px solid var(--chip);
+	border-radius: 18px;
+}
+
+.projects-page .pj-name-row {
+	display: flex;
+	align-items: center;
+	gap: 13px;
+}
+
+.projects-page .pj-accent-bar {
+	width: 5px;
+	height: 38px;
+	border-radius: 3px;
+	background: var(--accent);
+	flex: none;
+}
+
+.projects-page .pj-name {
+	margin: 0;
+	font-size: 42px;
+	line-height: 1;
+	letter-spacing: -0.032em;
+	font-weight: 800;
+	color: var(--text);
+	overflow-wrap: anywhere;
+}
+
+.projects-page .pj-intro {
+	margin: 0;
+	max-width: 620px;
+	font-size: 14px;
+	line-height: 1.6;
+	color: var(--text-3);
+}
+
+.projects-page .pj-intro-lg {
+	max-width: 680px;
+	font-size: 15px;
+}
+
+.projects-page .pj-counts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 18px;
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--text-4);
+}
+
+.projects-page .pj-plain-link {
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+/* ── Section heading ──────────────────────────────────── */
+
+.projects-page .pj-section {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.projects-page .pj-section-head {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+}
+
+.projects-page .pj-section-num {
+	font-size: 12px;
+	font-weight: 700;
+	color: var(--accent);
+	letter-spacing: 0.04em;
+}
+
+.projects-page .pj-section-title {
+	margin: 0;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--text);
+}
+
+.projects-page .pj-rule {
+	flex: 1;
+	height: 1px;
+	background: var(--chip);
+}
+
+.projects-page .pj-section-note {
+	font-size: 11px;
+	color: var(--muted);
+	white-space: nowrap;
+}
+
+/* ── Filters ──────────────────────────────────────────── */
+
+.projects-page .pj-filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+}
+
+.projects-page .pj-empty {
+	margin: 0;
+	padding: 28px;
+	font-size: 12px;
+	color: var(--text-4);
+	background: var(--band);
+	border: 1px dashed var(--chip);
+	border-radius: 12px;
+}
+
+/* ── Card grid ────────────────────────────────────────── */
+
+.projects-page .pj-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+	gap: 16px;
+}
+
+.projects-page .pj-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 18px 18px 16px;
+	background: var(--card);
+	border: 1px solid var(--chip);
+	border-radius: 12px;
+	transition:
+		transform 0.56s cubic-bezier(0.22, 1, 0.36, 1),
+		border-color 0.3s ease;
+}
+
+.projects-page .pj-card:hover {
+	transform: translateX(6px);
+	border-color: var(--accent);
+}
+
+.projects-page .pj-card-top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.projects-page .pj-card-num {
+	font-weight: 700;
+	color: var(--accent);
+}
+
+.projects-page .pj-card-kind {
+	color: var(--text-3);
+}
+
+.projects-page .pj-status {
+	color: var(--muted);
+}
+
+.projects-page .pj-status-live {
+	color: var(--accent-dark);
+}
+
+.projects-page .pj-dim {
+	color: var(--muted);
+}
+
+.projects-page .pj-card-name {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	line-height: 1.25;
+	color: var(--text);
+}
+
+.projects-page .pj-card-desc {
+	flex: 1;
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.55;
+	color: var(--text-3);
+}
+
+.projects-page .pj-tag-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	font-size: 10px;
+}
+
+.projects-page .pj-label {
+	padding: 3px 8px;
+	border: 1px solid var(--chip);
+	border-radius: 6px;
+	color: var(--text-2);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.projects-page .pj-ai-badge {
+	padding: 3px 8px;
+	border-radius: 6px;
+	background: var(--accent);
+	color: var(--bg);
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.projects-page .pj-tech {
+	padding: 2px 8px;
+	border-radius: 6px;
+	background: var(--band);
+	color: var(--accent-dark);
+}
+
+.projects-page .pj-tech-on-band {
+	background: var(--card);
+}
+
+.projects-page .pj-card-foot {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-top: 10px;
+	border-top: 1px solid var(--chip);
+	font-size: 11px;
+	color: var(--text-4);
+}
+
+/* The whole card is clickable through the "Read more" link. */
+.projects-page .pj-card-link::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 12px;
+}
+
+.projects-page .pj-card-link:focus-visible {
+	outline: none;
+}
+
+.projects-page .pj-card-link:focus-visible::after {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+}
+
+/* ── Detail ───────────────────────────────────────────── */
+
+.projects-page .pj-detail-body {
+	display: grid;
+	grid-template-columns: 236px minmax(0, 1fr);
+	gap: 28px;
+	align-items: start;
+}
+
+.projects-page .pj-aside {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	padding: 22px;
+	background: var(--band);
+	border-radius: 18px;
+}
+
+.projects-page .pj-side-label {
+	margin: 0;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--accent-dark);
+}
+
+.projects-page .pj-aside-rule {
+	height: 1px;
+	background: var(--chip);
+}
+
+.projects-page .pj-facts {
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 14px 20px;
+	font-size: 12px;
+}
+
+.projects-page .pj-fact {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	min-width: 0;
+}
+
+.projects-page .pj-fact dt {
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--text-4);
+}
+
+.projects-page .pj-fact dd {
+	margin: 0;
+	color: var(--text-2);
+	overflow-wrap: anywhere;
+}
+
+.projects-page .pj-links {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.projects-page .pj-article {
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.projects-page .pj-body {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.7;
+	color: var(--text-3);
+}
+
+.projects-page .pj-section .pj-body + .pj-body {
+	margin-top: 4px;
+}
+
+.projects-page .pj-ai-note {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 13px 15px;
+	background: var(--card);
+	border: 1px solid var(--chip);
+	border-radius: 12px;
+}
+
+.projects-page .pj-images {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 12px;
+}
+
+.projects-page .pj-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	background: var(--band);
+	border: 1px solid var(--chip);
+	border-radius: 12px;
+}
+
+.projects-page .pj-prevnext {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding-top: 16px;
+	border-top: 1px solid var(--chip);
+	font-size: 12px;
+}
+
+.projects-page .pj-prev {
+	color: var(--text-4);
+}
+
+.projects-page .pj-prev:hover {
+	color: var(--text);
+}
+
+/* ── Motion ───────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+	.projects-page .pj-card,
+	.projects-page .pj-btn {
+		transition: none;
+	}
+
+	.projects-page .pj-card:hover {
+		transform: none;
+	}
+}
+
+/* ── Narrow screens ───────────────────────────────────── */
+
+@media (max-width: 899px) {
+	.projects-page .pj-detail-body {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.projects-page .pj-header {
+		padding: 22px 20px;
+	}
+
+	.projects-page .pj-name {
+		font-size: clamp(30px, 8vw, 42px);
+	}
+}

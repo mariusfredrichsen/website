@@ -3,3 +3,8 @@
 :root {
 	@apply bg-gray-950 text-gray-50;
 }
+
+:focus-visible {
+	outline: 2px solid var(--color-orange-500);
+	outline-offset: 3px;
+}

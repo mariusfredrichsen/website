@@ -1,5 +1,5 @@
 // src/leaflet-providers.d.ts
-import * as L from "leaflet";
+import "leaflet";
 
 declare module "leaflet" {
 	namespace tileLayer {

@@ -1,4 +1,6 @@
 import '../../index.css';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 import imageData from '../../assets/lart_data.json';
 
 interface LatteArtItem {
@@ -34,32 +36,44 @@ function LattePage() {
         return dateB.getTime() - dateA.getTime();
     });
 
-    const groupedImages = groupBy(data, (_, index) => index % 3);
+    // One column on phones, three from the md breakpoint (768px).
+    const [columns, setColumns] = useState(() => window.matchMedia('(min-width: 768px)').matches ? 3 : 1);
+    useEffect(() => {
+        const query = window.matchMedia('(min-width: 768px)');
+        const update = () => setColumns(query.matches ? 3 : 1);
+        query.addEventListener('change', update);
+        return () => query.removeEventListener('change', update);
+    }, []);
+
+    const groupedImages = groupBy(data, (_, index) => index % columns);
 
     return (
         <div className="flex min-h-screen w-screen justify-center items-start bg-black py-12 relative">
-            <div className="p-8 bg-gray-900/95 rounded-xl text-center w-[75vw] mx-auto z-10 border border-gray-800">
+            <div className="p-8 bg-gray-900/95 rounded-xl text-center w-[75vw] mx-auto z-10 border border-gray-700">
+                <div className="text-left mb-4">
+                    <Link to="/" className="text-xl">← Hjem</Link>
+                </div>
                 <header className="flex flex-col gap-2">
                     <h1 className="text-5xl font-bold text-white tracking-tight">Kaffe lart!</h1>
                     <p className="text-gray-400 text-2xl">En liten bildesamling av mine latte kunst</p>
                 </header>
 
-                <hr className="my-8 border-gray-800" />
+                <hr className="my-8 border-gray-700" />
 
-                <div className="grid grid-cols-3 gap-4 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
                     {Object.entries(groupedImages).map(([key, columnItems]) => {
                         return (
                             <div key={key} className="flex flex-col gap-4">
                                 {columnItems.map((item, i) => (
                                     <div
                                         key={i}
-                                        className="group bg-gray-800 border border-gray-700 rounded-lg overflow-hidden text-white transition-all hover:border-gray-500"
+                                        className="group bg-gray-800 border border-gray-700 rounded-lg overflow-hidden text-white transition-colors duration-300 hover:border-orange-500"
                                     >
                                         <div className="bg-gray-700 w-full overflow-hidden">
                                             <img
                                                 src={`larts/${item.filename}`}
                                                 alt={item.description || "Latte art"}
-                                                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                                                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                                             />
                                         </div>
 
@@ -80,7 +94,7 @@ function LattePage() {
                                                 {item.tags.map(tag => (
                                                     <span
                                                         key={tag}
-                                                        className="text-[9px] bg-white/5 border border-white/10 text-gray-400 px-2 py-0.5 rounded"
+                                                        className="text-[9px] font-mono bg-gray-900 border border-gray-700 text-gray-200 px-2 py-0.5 rounded-md"
                                                     >
                                                         #{tag}
                                                     </span>

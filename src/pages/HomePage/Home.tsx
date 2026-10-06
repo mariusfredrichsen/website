@@ -60,7 +60,7 @@ function Home() {
                     <h1 className="text-4xl">Velkommen!</h1>
                     <p>Jeg heter Marius Angelo Eullaran Fredrichsen (derfor maef.no) og er en {getCurrentAge()}år gammal student som går 1.året master på Universitet i Oslo</p>
                 </header>
-                <hr className="my-8" />
+                <hr className="my-8 border-gray-700" />
                 <div className="">
                     <HoverLinkList />
                 </div>

@@ -1,12 +1,16 @@
+import { Link } from "react-router";
 import type { Project } from "../cv_content";
 
 type ProjectsProps = {
 	projects: Project[];
+	readMore: string;
+	readLess: string;
+	fullPage: string;
 	expandedProject: string | null;
 	onExpandedChange: (projectName: string | null, cardOffset?: number, centerOffset?: number) => void;
 }
 
-function Projects({ projects, expandedProject, onExpandedChange }: ProjectsProps) {
+function Projects({ projects, readMore, readLess, fullPage, expandedProject, onExpandedChange }: ProjectsProps) {
 	const toggleProject = (projectName: string, card: HTMLElement) => {
 		const nextProject = expandedProject === projectName ? null : projectName;
 		const { left, width } = card.getBoundingClientRect();
@@ -47,9 +51,20 @@ function Projects({ projects, expandedProject, onExpandedChange }: ProjectsProps
 					<p className="cv-project-desc">{p.desc}</p>
 					<div className="cv-project-details">
 						<p className="cv-project-extra">{p.details}</p>
+						{/* Keep link clicks and Enter from toggling the card. */}
+						<div
+							className="cv-project-links cv-mono"
+							onClick={(event) => event.stopPropagation()}
+							onKeyDown={(event) => event.stopPropagation()}
+						>
+							{p.url && (
+								<a href={p.url} target="_blank" rel="noopener noreferrer">{p.url.replace(/^https?:\/\//, "")} ↗</a>
+							)}
+							{p.slug && <Link to={`/projects/${p.slug}`}>{fullPage} →</Link>}
+						</div>
 					</div>
-					<span className="cv-project-read-more">
-						{expandedProject === p.name ? "Read less" : "Read more"}
+					<span className="cv-project-read-more cv-mono">
+						{expandedProject === p.name ? readLess : readMore}
 					</span>
 				</article>
 			))}

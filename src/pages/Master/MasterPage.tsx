@@ -36,23 +36,23 @@ function MasterPage() {
 
     return (
         <div className="flex flex-col min-h-screen w-screen justify-start items-center bg-black py-12 relative">
-            <h1 className="mb-48">
+            <h1 className="mb-48 text-4xl">
                 Nedtelling til Masteroppgaven
             </h1>
 
             <div className="flex flex-col items-center gap-24">
-                <div>
-                    <h2 className="flex flex-col items-center">
+                <div className="flex flex-col items-center gap-2">
+                    <h2 className="text-2xl text-gray-400">
                         Tid igjen til essay:
                     </h2>
-                    <h3>{formatDate(essayTime)}</h3>
+                    <h3 className="text-3xl text-orange-500">{formatDate(essayTime)}</h3>
 
                 </div>
-                <div className="flex flex-col items-center">
-                    <h2>
+                <div className="flex flex-col items-center gap-2">
+                    <h2 className="text-2xl text-gray-400">
                         Tid igjen til master:
                     </h2>
-                    <h3>{formatDate(masterTime)}</h3>
+                    <h3 className="text-3xl text-orange-500">{formatDate(masterTime)}</h3>
                 </div>
             </div>
         </div >

@@ -14,8 +14,8 @@ type Mode = "dark" | "light";
 type ExpandedProject = { name: string; cardOffset: number; documentOffset: number };
 
 const ui = {
-	no: { length: "Lengde", concise: "Kort", full: "Full", light: "Lys", dark: "Mørk", home: "Til hovedsiden", other: "English" },
-	en: { length: "Length", concise: "Concise", full: "Full", light: "Light", dark: "Dark", home: "Back to main site", other: "Norsk" },
+	no: { length: "Lengde", concise: "Kort", full: "Full", light: "Lys", dark: "Mørk", home: "Til hovedsiden", other: "English", back: "Tilbake", readMore: "Les mer", readLess: "Les mindre", projects: "Prosjekter", fullPage: "Hele prosjektsiden" },
+	en: { length: "Length", concise: "Concise", full: "Full", light: "Light", dark: "Dark", home: "Back to main site", other: "Norsk", back: "Back", readMore: "Read more", readLess: "Read less", projects: "Projects", fullPage: "Full project page" },
 } as const;
 
 function CV() {
@@ -43,10 +43,11 @@ function CV() {
 
 			<div className="cv-toolbar">
 				<Link to="/" className="cv-btn cv-btn-link">← {t.home}</Link>
+				<Link to="/projects" className="cv-btn cv-btn-link">{t.projects} →</Link>
 
 				<span className="cv-toolbar-divider" />
 
-				<span className="cv-toolbar-label">{t.length}</span>
+				<span className="cv-toolbar-label cv-mono">{t.length}</span>
 				<div className="cv-toolbar-group">
 					<button
 						className={`cv-btn${variant === "concise" ? " cv-btn-active" : ""}`}
@@ -66,7 +67,7 @@ function CV() {
 
 				{expandedProject && (
 					<button className="cv-btn" onClick={() => setExpandedProject(null)}>
-						← Back
+						← {t.back}
 					</button>
 				)}
 
@@ -102,7 +103,7 @@ function CV() {
 						<section className="cv-section">
 							<SectionHeading number="02" title={c.h.projects} note={c.projectsNote} />
 							<Projects
-								projects={projects}
+								projects={projects} readMore={t.readMore} readLess={t.readLess} fullPage={t.fullPage}
 								expandedProject={expandedProject?.name ?? null}
 								onExpandedChange={(name, cardOffset, centerOffset) => setExpandedProject((current) => {
 									if (!name || !cardOffset || centerOffset === undefined) return null;

@@ -4,6 +4,7 @@ import BulletItem from "./BulletItem";
 type TimelineEntry = TimelineItem & {
 	desc?: string;
 	courses?: string[];
+	tech?: string[];
 }
 
 type TimelineProps = {
@@ -21,6 +22,13 @@ function Timeline({ items }: TimelineProps) {
 						<div className="cv-item-period cv-mono">{it.period}</div>
 					</div>
 					<div className="cv-item-org">{it.org}</div>
+					{it.tech && it.tech.length > 0 && (
+						<div className="cv-chip-row cv-item-tech">
+							{it.tech.map((t, i) => (
+								<span key={i} className="cv-chip cv-mono">{t}</span>
+							))}
+						</div>
+					)}
 					{it.desc && <p className="cv-item-desc">{it.desc}</p>}
 					{it.courses && it.courses.length > 0 && (
 						<div className="cv-item-courses">

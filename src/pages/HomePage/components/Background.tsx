@@ -15,7 +15,7 @@ const SortingButton = ({
 
     return (
         <button
-            className="absolute top-8 right-8 bg-gray-600 text-white px-4 py-2 rounded z-20 cursor-pointer"
+            className="absolute top-8 right-8 bg-gray-800 border border-gray-700 text-gray-200 hover:text-gray-50 transition-colors duration-150 px-4 py-2 rounded z-20 cursor-pointer"
             onClick={() => {
                 setSortType(prev => {
                     if (prev === "bubble") return "select";
@@ -25,7 +25,7 @@ const SortingButton = ({
                 setI(0) // restart the sorting
             }}
         >
-            Sort: {sortType.charAt(0).toUpperCase() + sortType.slice(1)}
+            Sorter: {sortType.charAt(0).toUpperCase() + sortType.slice(1)}
         </button>
     )
 }
@@ -100,7 +100,7 @@ function Background() {
                         timeoutId = setTimeout(() => {
                             const numbersCopy = [...numbers];
                             const n = numbersCopy.length;
-                            let currentI = i;
+                            const currentI = i;
                             if (currentI < n) {
                                 let currentJ = currentI;
                                 while (currentJ > 0 && numbersCopy[currentJ] < numbersCopy[currentJ - 1]) {

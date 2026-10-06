@@ -143,8 +143,8 @@ function Run() {
     }, []);
 
     return (
-        <div className="w-screen h-screen p-4 bg-gray-900 flex flex-col gap-8">
-            <div className="flex p-4 bg-gray-800 justify-between rounded">
+        <div className="w-screen h-screen p-4 bg-gray-950 flex flex-col gap-8">
+            <div className="flex p-4 bg-gray-900 justify-between rounded">
                 <div className="flex items-center gap-1 whitespace-nowrap text-2xl ">
                     <div className="flex items-center -space-x-1">
                         <a href="https://maef.no"
@@ -152,13 +152,13 @@ function Run() {
                             rel="noopener noreferrer">&lt;-- Home page</a>
                     </div>
                 </div>
-                <div className="w-full p-8 flex justify-center items-center bg-gray-800">
+                <div className="w-full p-8 flex justify-center items-center bg-gray-900">
                     <div className="justify-start text-5xl font-normal"><strong><span>My</span> <span className="text-orange-500">Strava</span> <span>Run Data</span></strong></div>
                 </div>
             </div>
             <div className="flex h-full gap-8 flex-col md:flex-row">
 
-                <div className="relative w-full self-stretch bg-gray-800 rounded flex flex-col flex-1/4 overflow-auto">
+                <div className="relative w-full self-stretch bg-gray-900 rounded flex flex-col flex-1/4 overflow-auto">
                     {showTopShadow && (
                         <div className="absolute top-0 left-0 right-0 h-6 pointer-events-none z-20 shadow-[inset_0_16px_16px_-8px_rgba(0,0,0,0.5)]" />
                     )}
@@ -168,21 +168,21 @@ function Run() {
                     )}
 
                     <div ref={scrollRef} className="overflow-auto flex flex-col h-full">
-                        <div className="w-full p-8 border-b flex justify-center items-center bg-gray-800">
+                        <div className="w-full p-8 border-b border-gray-700 flex justify-center items-center bg-gray-900">
                             <div className="justify-start text-4xl font-normal"><strong>Countries</strong></div>
                         </div>
 
                         {Array.from(countryActivities.entries()).map(([country, activities]) => (
                             <div
                                 key={country}
-                                className={`w-full px-4 py-4 border-b flex flex-col gap-2 cursor-pointer ${selectedCountry === country ? "bg-gray-700" : ""
+                                className={`w-full px-4 py-4 border-b border-gray-700 flex flex-col gap-2 cursor-pointer ${selectedCountry === country ? "bg-gray-700" : ""
                                     }`}
                                 onClick={() => selectCountry(country)}
                             >
                                 <div className="justify-start text-xl md:text-2xl font-normal">
                                     <strong>{country}</strong>
                                 </div>
-                                <div className="self-stretch inline-flex justify-start items-start gap-4 overflow-hidden text-sm md:text-base">
+                                <div className="self-stretch inline-flex justify-start items-start gap-4 overflow-hidden text-sm md:text-base text-gray-400">
                                     <p>{activities.reduce((sum, a) => sum + a.distance / 1000, 0).toFixed(1)}km</p>
                                     <p>{activities.reduce((sum, a) => sum + a.movingTime / 3600, 0).toFixed(1)}h</p>
                                     <p>{(() => {
@@ -211,7 +211,7 @@ function Run() {
                                         key={activity.id ?? idx}
                                         positions={decodedPolyline}
                                         pathOptions={{
-                                            color: 'orange',
+                                            color: 'oklch(70.5% 0.213 47.604)', // orange-500
                                             opacity: 0.25,
                                         }}
                                     />
@@ -228,11 +228,11 @@ function Run() {
 
                 </div>
             </div >
-            <div className="flex p-4 bg-gray-800 justify-between rounded">
+            <div className="flex p-4 bg-gray-900 justify-between rounded">
                 <a href="https://www.strava.com/athletes/74137055" target="_blank" rel="noopener noreferrer">
                     <img src={stravaLogo} alt="Strava Logo" />
                 </a>
-                <div className="flex items-center justify-start text-1xl font-normal"><strong>Updated 24.07.2025</strong></div>
+                <div className="flex items-center justify-start text-base font-normal"><strong>Updated 24.07.2025</strong></div>
             </div>
         </div >
     )

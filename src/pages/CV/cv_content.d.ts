@@ -28,9 +28,12 @@ export type Experience = {
     period: string;
     desc: string;
     courses: string[];
+    tech?: string[];
     core?: boolean;
 };
 export type Project = {
+    slug?: string;
+    url?: string;
     name: string;
     tech: string[];
     desc: string;
@@ -41,6 +44,8 @@ export type TimelineItem = {
     role: string;
     org: string;
     period: string;
+    desc?: string;
+    tech?: string[];
     core?: boolean;
 };
 export type CVContent = {
